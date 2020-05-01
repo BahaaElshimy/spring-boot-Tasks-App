@@ -1,1 +1,8 @@
-<p>task-list works!</p>
+<ul>
+
+    <li *ngFor="let task of tasks">
+        <input type="checkbox" (change)="taskChange($event ,task)"  [checked]="task.completed"/>
+        <span>{{task.description}}</span>--
+        <span  ngClass="{{task.completed ? 'completed' : 'incompleted'}}">{{task.dueDate}}</span>
+    </li>
+</ul>

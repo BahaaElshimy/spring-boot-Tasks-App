@@ -1,10 +1,7 @@
 package com.bahaa.controller;
 
 import com.bahaa.service.TaskService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.bahaa.domain.Task;
 /**
  * Created by bahaa on 01/05/20.
@@ -26,7 +23,7 @@ public class TaskController {
 
 
     @PostMapping(value = "/save")
-    public void save(Task task){
+    public void save(@RequestBody Task task){
         this.taskService.save(task);
     }
 }

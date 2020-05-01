@@ -21,11 +21,11 @@ public class BootStrapData implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        taskService.save(new Task("help your wife" , LocalDate.now()));
-        taskService.save(new Task("pray Asr" , LocalDate.now().plusDays(2)));
-        taskService.save(new Task("do Iftar" , LocalDate.now().plusMonths(5)));
-        taskService.save(new Task("Pray Maghrib" , LocalDate.now().plusDays(1)));
-        taskService.save(new Task("study for mor 2 hours" , LocalDate.now().plusDays(3)));
-        taskService.save(new Task("pray ishaa and trawih" , LocalDate.now()));
+        taskService.save(new Task("help your wife" , LocalDate.now(),false));
+        taskService.save(new Task("pray Asr" , LocalDate.now().plusDays(2),true));
+        taskService.save(new Task("do Iftar" , LocalDate.now().plusMonths(5),false));
+        taskService.save(new Task("Pray Maghrib" , LocalDate.now().plusDays(1),false));
+        taskService.save(new Task("study for mor 2 hours" , LocalDate.now().plusDays(3),false));
+        taskService.save(new Task("pray ishaa and trawih" , LocalDate.now(),false));
     }
 }
